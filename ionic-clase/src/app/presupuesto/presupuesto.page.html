@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-title>
+          Presupuesto
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+      <ion-toolbar>
+          <ion-title size="large">Presupuesto</ion-title>
+      </ion-toolbar>
+  </ion-header>
+  <ion-list>
+      <ion-list-header>
+          <ion-label>
+              Tipo de astos y monto
+          </ion-label>
+      </ion-list-header>
+      <ion-item>
+          <ion-label>Gastos</ion-label>
+          <ion-select [(ngModel)]="selectedValue" multiple="false" (ionChange)="cambioValor(selectedValue)">
+              <ion-select-option [value]="option" *ngFor="let option of  gastos">{{option}}
+              </ion-select-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-label>
+              Monto:
+          </ion-label>
+          <ion-input type="number" [(ngModel)]="monto" placeholder="Ingrese el monto"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+            Descripci&oacute;n:
+        </ion-label>
+        <ion-input type="text" [(ngModel)]="descripcion" placeholder="Ingrese la descripcion"></ion-input>
+    </ion-item>
+      <ion-item>
+          <ion-button type="button" (click)="guardar()">Guardar</ion-button>
+      </ion-item>
+      <ion-item>
+          <ion-label>Resultados</ion-label>
+          <ion-textarea color="{{errResultados}}" [(ngModel)]="resultados" clearOnEdit="true" readonly="true"></ion-textarea>
+      </ion-item>
+  </ion-list>
+  <ion-grid *ngIf="gastosList.length>0">
+    <ion-row>
+        <ion-col size="1">id</ion-col>
+        <ion-col size="5">Descripcion</ion-col>
+        <ion-col size="2">Monto</ion-col>
+        <ion-col size="3">Tipo</ion-col>
+        <ion-col size="1"></ion-col>
+    </ion-row>
+    <ion-row *ngFor="let gasto of gastosList">
+        <ion-col size="1">
+            {{gasto.id}}
+        </ion-col>
+        <ion-col size="5">
+            {{gasto.descripcion}}
+        </ion-col>
+        <ion-col size="2">
+            {{gasto.monto}}
+        </ion-col>
+        <ion-col size="3">
+            {{gasto.tipo}}
+        </ion-col>
+        <ion-col size="1" (click)="borrarGasto(gasto)">X</ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>
