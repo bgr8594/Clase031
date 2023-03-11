@@ -1,0 +1,7 @@
+{
+  "name": "primer avance de PIA",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
