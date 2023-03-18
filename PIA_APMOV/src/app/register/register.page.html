@@ -1,0 +1,43 @@
+<div class="contenido-login">
+
+
+  <p>¡Registrate!</p>
+
+  <div>
+      <ion-item class="input">
+        <ion-label position="stacked">Usuario:</ion-label>
+        <ion-input placeholder="Tu Usuario"></ion-input>
+      </ion-item>
+
+      <ion-item class="input">
+        <ion-label position="stacked">Contraseña:</ion-label>
+        <ion-input placeholder="******"></ion-input>
+      </ion-item>
+  </div>
+  <div class="botones">
+    <ion-button class="boton">Registrarte ahora</ion-button>
+    <ion-button class="boton" (click)="gotoLogin()">Ya tengo una cuenta</ion-button>
+  </div>
+  <img src="src\img\gato.png" alt="">
+  
+</div>
+
+
+<ion-tab-bar slot="bottom">
+<ion-tab-button tab="home">
+<ion-icon name="cash-outline"></ion-icon>
+Recompensas
+</ion-tab-button>
+<ion-tab-button tab="about">
+<ion-icon name="radio"></ion-icon>
+Radar de Mascotas
+</ion-tab-button>
+<ion-tab-button tab="about" (click)="gotoHome()">
+<ion-icon name="information-circle-outline"></ion-icon>
+Acerca de
+</ion-tab-button>
+<ion-tab-button tab="about" (click)="gotoAccount()">
+<ion-icon name="person"></ion-icon>
+Mi Cuenta
+</ion-tab-button>
+</ion-tab-bar>

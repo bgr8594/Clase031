@@ -1,0 +1,44 @@
+  <div class="contenido-login">
+
+
+      <p>Ingresa a tu <span>cuenta</span>:</p>
+
+      <div>
+          <ion-item class="input">
+            <ion-label position="stacked">Usuario:</ion-label>
+            <ion-input placeholder="Tu Usuario"></ion-input>
+          </ion-item>
+
+          <ion-item class="input">
+            <ion-label position="stacked">Contraseña:</ion-label>
+            <ion-input placeholder="******"></ion-input>
+          </ion-item>
+      </div>
+      <p>Olvide mi contraseña</p>
+      <div class="botones">
+        <ion-button class="boton">Iniciar sesion</ion-button>
+        <p>o</p>
+        <ion-button class="boton" (click)="gotoRegister()">Registrate</ion-button>
+      </div>
+      
+  </div>
+
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="home">
+    <ion-icon name="cash-outline"></ion-icon>
+    Recompensas
+  </ion-tab-button>
+  <ion-tab-button tab="about">
+    <ion-icon name="radio"></ion-icon>
+    Radar de Mascotas
+  </ion-tab-button>
+  <ion-tab-button tab="about" (click)="gotoHome()">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    Acerca de
+  </ion-tab-button>
+  <ion-tab-button tab="about" (click)="gotoAccount()">
+    <ion-icon name="person"></ion-icon>
+    Mi Cuenta
+  </ion-tab-button>
+</ion-tab-bar>

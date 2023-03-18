@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="titulo">
+    <ion-title>
+      Tu cuenta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+
+  <div class="cuenta-interfaz">
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="200" height="200"
+      viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="10" r="3" />
+      <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
+    </svg>
+    <ion-button [routerLink]="['/login']">Iniciar sesion</ion-button>
+    <ion-button [routerLink]="['/register']">Crear una cuenta</ion-button>
+  </div>
+
+  <div class="contenido-cuenta">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus dignissimos aperiam eaque quod earum officiis eligendi ipsa quae saepe rerum soluta, repellat molestiae eius hic ratione ducimus dolor? Ratione, ad.</p>
+  </div>
+
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="home">
+    <ion-icon name="cash-outline"></ion-icon>
+    Recompensas
+  </ion-tab-button>
+  <ion-tab-button tab="about">
+    <ion-icon name="radio"></ion-icon>
+    Radar de Mascotas
+  </ion-tab-button>
+  <ion-tab-button tab="about" (click)="gotoHome()">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    Acerca de
+  </ion-tab-button>
+  <ion-tab-button tab="about">
+    <ion-icon name="person"></ion-icon>
+    Mi Cuenta
+  </ion-tab-button>
+</ion-tab-bar>
