@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/html": "off",
+    "meta-viewport": "off"
+  }
+}

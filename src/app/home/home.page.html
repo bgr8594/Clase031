@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      ¡Bienvenidos, Bisontes!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <!--Titulo de inicio-->
+    <strong>¡Bienvenidos a FCFMart!</strong>
+    <!--Aqui se debe de poner un salto de linea adecuado adecuado entre titulos-->
+    <br>
+    <!--Subtitulo de inicio-->
+    <strong>El catálogo donde se encuentra toda la comida de nuestra facultad</strong>
+    <p>¿Es vendedor o cliente?</p>
+    <!--Botones que redirigen a paginas-->
+    <ion-button routerLink="/registro-vendedor">Vendedor</ion-button>
+  
+    <ion-button routerLink="/home-vendedor" >Cliente</ion-button>
+  </div>
+</ion-content>

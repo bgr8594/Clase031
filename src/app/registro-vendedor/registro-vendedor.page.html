@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro Vendedor</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<form [formGroup]="formLogin" (ngSubmit)="registro()">
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Introduce correo electrónico</ion-label>
+      <ion-input [clearOnEdit]="true"  formControlName="email" placeholder="Correo electrónico"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Introduce contraseña</ion-label>
+      <ion-input type="password" formControlName="password" placeholder="Contraseña"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button type="submit">Registrarse</ion-button>
+  
+</form>
+
+
+</ion-content>
