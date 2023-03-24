@@ -23,21 +23,8 @@
 </div>
 
 
-<ion-tab-bar slot="bottom">
-<ion-tab-button tab="home">
-<ion-icon name="cash-outline"></ion-icon>
-Recompensas
-</ion-tab-button>
-<ion-tab-button tab="about">
-<ion-icon name="radio"></ion-icon>
-Radar de Mascotas
-</ion-tab-button>
-<ion-tab-button tab="about" (click)="gotoHome()">
-<ion-icon name="information-circle-outline"></ion-icon>
-Acerca de
-</ion-tab-button>
-<ion-tab-button tab="about" (click)="gotoAccount()">
-<ion-icon name="person"></ion-icon>
-Mi Cuenta
-</ion-tab-button>
-</ion-tab-bar>
+<ion-fab slot="fixed" vertical="top" horizontal="center" (click)="gotoAccount()">
+  <ion-fab-button id="boton-esc__icono">
+    <ion-icon name="close-outline"></ion-icon>  
+  </ion-fab-button>
+</ion-fab>

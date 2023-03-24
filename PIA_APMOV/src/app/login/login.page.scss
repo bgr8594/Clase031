@@ -34,18 +34,21 @@
 .contenido-login p:nth-child(3){
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    font-weight: bold;
     text-align: center;
     text-decoration: underline;
     color: black;
     margin: 10px,0;
 }
 .input{
-    --background: #FFFfFF;
+    --background: #FFFFFF;
     --color: #30343f;
+    --border-color:white;
     border-radius:10px;
     margin-top:15px;
     margin: 20px,0;
     width: 100%;
+    --highlight-background: #e2e2e2;
 }
 .botones{
     display: flex;
@@ -58,4 +61,12 @@
     --border-radius: 10px;
     color: black;
     width: 100%;
+}
+
+#boton-esc__icono{
+  --background: white;
+  --border-radius: 30px;
+  --box-shadow: 0px 1px 2px 0px rgba(0,0,0,.3), 0px 1px 3px 1px rgba(0,0,0,.15);
+  --color: black;
+
 }
