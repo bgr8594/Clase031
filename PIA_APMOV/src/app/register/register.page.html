@@ -1,29 +1,28 @@
 <div class="contenido-login">
 
 
-  <p>¡Registrate!</p>
+  <p>¡<span id="registrate-texto">Registrate</span>!</p>
 
   <div>
       <ion-item class="input">
-        <ion-label position="stacked">Usuario:</ion-label>
+        <ion-label>Usuario:</ion-label>
         <ion-input placeholder="Tu Usuario"></ion-input>
       </ion-item>
 
       <ion-item class="input">
-        <ion-label position="stacked">Contraseña:</ion-label>
-        <ion-input placeholder="******"></ion-input>
+        <ion-label>Contraseña:</ion-label>
+        <ion-input type="password" value="password"></ion-input>
       </ion-item>
   </div>
   <div class="botones">
     <ion-button class="boton">Registrarte ahora</ion-button>
     <ion-button class="boton" (click)="gotoLogin()">Ya tengo una cuenta</ion-button>
   </div>
-  <img src="src\img\gato.png" alt="">
   
 </div>
 
 
-<ion-fab slot="fixed" vertical="top" horizontal="center" (click)="gotoAccount()">
+<ion-fab slot="fixed" vertical="bottom" horizontal="center" (click)="gotoAccount()">
   <ion-fab-button id="boton-esc__icono">
     <ion-icon name="close-outline"></ion-icon>  
   </ion-fab-button>

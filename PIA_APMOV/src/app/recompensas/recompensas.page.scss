@@ -1,0 +1,24 @@
+/* iOS places the subtitle above the title */
+ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+ion-content{
+    --background: linear-gradient(180deg, #d8206f 0%, #cbefed 100%, #cbefed 70%);
+}
+
+ion-toolbar{
+    --background:white;
+    --border-color: white;
+    padding: 10px;
+    height: 100%;
+}
+
+
+.titulo-recompensas{
+    color: black;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}

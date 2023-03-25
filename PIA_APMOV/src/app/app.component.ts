@@ -15,4 +15,8 @@ export class AppComponent {
   gotoHome(){
     this.router.navigate(['/home'])
   } 
+
+  gotoRecompensas(){
+    this.router.navigate(['/recompensas']);
+  }
 }
