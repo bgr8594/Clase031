@@ -1,0 +1,80 @@
+
+<ion-content [fullscreen]="true">
+
+  <ion-header >
+    <ion-toolbar>
+      <ion-title>Pagina para agregar Canciones y eliminarlas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>
+        Ingrese los datos de la canción: 
+      </ion-label>      
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>
+        Seleccione el tipo de Datos: 
+      </ion-label>
+      <ion-select [(ngModel)]="selectedValue" multiple="False" (ionChange)="changeValue(selectedValue)">
+        <ion-select-option [value]="option" *ngFor="let option of gastos"> {{option}} </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        Cantidad del Monto:
+      </ion-label>
+      <ion-input type="number" [(ngModel)]="monto"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>
+        Fecha de lanzamiento: 
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="lanzamiento" placeholder="Ingrese la fecha"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>
+        Ingrese una descripcion de la canción: 
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="descripcion" placeholder="Ingrese descripcion"></ion-input>
+    </ion-item>
+
+    <ion-item>      
+        <ion-button type="button" (click)="guardar()">
+          Guardar Datos en la lista
+        </ion-button>      
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Resultados <br> </ion-label>
+    </ion-item>
+
+  </ion-list>
+  <ion-grid *ngIf="gastosList.length > 0">
+    <ion-row>
+      <ion-col size="1">id</ion-col>
+      <ion-col size="3">Descripcion</ion-col>
+      <ion-col size="2">Monto</ion-col>
+      <ion-col size="2">Lanzamiento</ion-col>
+      <ion-col size="3">Tipo</ion-col>
+      <ion-col size="1"></ion-col>
+    </ion-row>
+    <ion-row *ngFor="let gasto of gastosList">
+      <ion-col size="1"> {{gasto.id}} </ion-col>
+      <ion-col size="3"> {{gasto.descripcion}} </ion-col>
+      <ion-col size="2"> {{gasto.monto}} </ion-col>
+      <ion-col size="2"> {{gasto.lanzamiento}} </ion-col>
+      <ion-col size="3"> {{gasto.tipo}} </ion-col>
+      <ion-col size="1" (click)="borrarGasto(gasto)">X</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
