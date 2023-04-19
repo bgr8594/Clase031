@@ -1,0 +1,7 @@
+{
+  "name": "Antojitos Monterry",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
