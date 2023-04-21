@@ -1,9 +1,26 @@
-<ion-header>
+<ion-header translucent="true">
   <ion-toolbar color="reposteria">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Carrito</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of selectedItems" lines="inset">
+      <!--{{item.quantity}} x {{item.name}} - $ {{item.price}}
+      <span slot="end"t> $ {{item.price * item.quantity}} </span>-->
+    </ion-item>
+    <ion-item class="bold">
+      Total: <span slot="end"> $ {{total}} </span>
+    </ion-item>
+  </ion-list>
+
+  <div class="center">
+    <button class="buttonPedido" color="reposteria">Realizar Pedido</button>
+    <button class="buttonBorrar" full round (click)="remove()" color="reposteria">Borrar carrito</button>
+  </div>
 
 </ion-content>
