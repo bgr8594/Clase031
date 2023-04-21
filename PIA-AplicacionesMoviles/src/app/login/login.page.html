@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Iniciar sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="ion-padding custom-content">
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col size-md="5">
+        <ion-card>
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="floating">Correo electrónico</ion-label>
+              <ion-input type="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+            <ion-button expand="block">Iniciar sesión</ion-button>
+          </ion-card-content>
+        </ion-card>
+        <ion-text class="ion-text-center">¿No tienes una cuenta? <a routerLink="/registrar">Regístrate aquí</a></ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

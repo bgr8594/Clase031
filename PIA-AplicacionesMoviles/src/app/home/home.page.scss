@@ -25,3 +25,24 @@
 #container a {
   text-decoration: none;
 }
+
+/* Botón de inicio de sesión */
+ion-button.login {
+  --background: #007bff;
+  --color: #fff;
+  --border-radius: 10px;
+  --box-shadow: none;
+  --ion-activatable-background-color: #007bff;
+  --ion-activatable-background-transparency: 0.6;
+}
+
+/* Botón de registro */
+ion-button.registro {
+  --background: #fff;
+  --color: #007bff;
+  --border-radius: 10px;
+  --box-shadow: none;
+  --border: 1px solid #007bff;
+  --ion-activatable-background-color: #007bff;
+  --ion-activatable-background-transparency: 0.6;
+}
