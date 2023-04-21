@@ -74,9 +74,17 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+    /** reposteria **/
+    --ion-color-reposteria: #b89c61;
+    --ion-color-reposteria-rgb: 184,156,97;
+    --ion-color-reposteria-contrast: #000000;
+    --ion-color-reposteria-contrast-rgb: 0,0,0;
+    --ion-color-reposteria-shade: #a28955;
+    --ion-color-reposteria-tint: #bfa671;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------

@@ -29,8 +29,8 @@ describe('AppComponent', () => {
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-label');
     expect(menuItems.length).toEqual(12);
-    expect(menuItems[0].textContent).toContain('Menu');
-    expect(menuItems[1].textContent).toContain('Comentarios');
+    expect(menuItems[0].textContent).toContain('Inicio de Sesión');
+    expect(menuItems[1].textContent).toContain('Menu');
     expect(menuItems[2].textContent).toContain('Favoritos');
     expect(menuItems[3].textContent).toContain('Carrito');
   });
@@ -41,10 +41,10 @@ describe('AppComponent', () => {
     const app = fixture.nativeElement;
     const menuItems = app.querySelectorAll('ion-item');
     expect(menuItems.length).toEqual(12);
-    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/folder/Menu');
-    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/folder/Comentarios');
-    expect(menuItems[2].getAttribute('ng-reflect-router-link')).toEqual('/folder/Favoritos');
-    expect(menuItems[3].getAttribute('ng-reflect-router-link')).toEqual('/folder/Carrito');
+    expect(menuItems[0].getAttribute('ng-reflect-router-link')).toEqual('/login');
+    expect(menuItems[1].getAttribute('ng-reflect-router-link')).toEqual('/menu');
+    expect(menuItems[2].getAttribute('ng-reflect-router-link')).toEqual('/favs');
+    expect(menuItems[3].getAttribute('ng-reflect-router-link')).toEqual('/cart');
   });
 
 });

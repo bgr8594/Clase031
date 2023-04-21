@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { Platform } from '@ionic/angular';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -6,10 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Menú', url: '/folder/Menu', icon: 'cafe' },
-    { title: 'Comentarios', url: '/folder/Comentarios', icon: 'paper-plane' },
-    { title: 'Favoritos', url: '/folder/Favoritos', icon: 'heart' },
-    { title: 'Carrito', url : '/folder/Carrito', icon: 'cart'}
+    { title: 'Inicio de Sesion', url: '/login', icon: 'person-circle' },
+    { title: 'Menú', url: '/menu', icon: 'cafe' },
+    { title: 'Favoritos', url: '/favs', icon: 'heart' },
+    { title: 'Carrito', url : '/cart', icon: 'cart'}
   ];
 
   public labels = [];
