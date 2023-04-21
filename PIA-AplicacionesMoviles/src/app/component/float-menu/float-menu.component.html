@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+
+      <ion-title>CitricalGaming</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-menu side="start" content-id="main">
+  <ion-content id="menuFloat">
+      <ion-list>
+          <ion-menu-toggle *ngFor="let c of datosMenu">
+              <ion-item (click)="navegar(c.enlace)">
+                  <ion-icon name='{{c.icono}}'></ion-icon>
+                  <ion-label>{{ c.nombre }}</ion-label>
+              </ion-item>
+          </ion-menu-toggle>
+      </ion-list>
+  </ion-content>
+</ion-menu>

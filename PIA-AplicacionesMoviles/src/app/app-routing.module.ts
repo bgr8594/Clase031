@@ -7,6 +7,19 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'main',
+    children: [
+      {
+        path: 'catalogo',
+    loadChildren: () => import('./catalogo/catalogo.module').then( m => m.CatalogoPageModule)
+      },
+      {
+        path: 'valoracion',
+        loadChildren: () => import('./valoracion/valoracion.module').then( m => m.ValoracionPageModule)
+      },
+    ]
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
@@ -18,15 +31,7 @@ const routes: Routes = [
   {
     path: 'registrar',
     loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
-  },
-  {
-    path: 'catalogo',
-    loadChildren: () => import('./catalogo/catalogo.module').then( m => m.CatalogoPageModule)
-  },
-  {
-    path: 'valoracion',
-    loadChildren: () => import('./valoracion/valoracion.module').then( m => m.ValoracionPageModule)
-  },
+  }, //Iba Valoracion
 ];
 
 @NgModule({
