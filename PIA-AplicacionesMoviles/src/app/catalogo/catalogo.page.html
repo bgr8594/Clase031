@@ -1,9 +1,30 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>catalogo</ion-title>
+    <ion-title>
+      Catálogo de Videojuegos
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding fullscreen>
+  <ion-grid fixed>
+    <ion-row> <!--size="12" size-md="6" size-lg="4"  size-sm="6"-->
+              <!--size="12" size-md="4" size-lg="3"  size-sm="6"-->
+      <ion-col size="12" size-md="4" size-lg="4"  size-sm="6" *ngFor="let juego of juegos">
+        <ion-card >
+          <img [src]="juego.img">
+          <ion-card-header>
+            <ion-card-title>
+              {{juego.nombre}}
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{juego.descripcion}}
+          </ion-card-content>
+          <!--Dar click y ir a la pagina del juego-->
+          <ion-button fill="clear">Action 1</ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
