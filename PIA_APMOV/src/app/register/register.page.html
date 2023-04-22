@@ -1,0 +1,45 @@
+
+<ion-content >
+  <div class="imagen-fondo">
+    <img src="https://media.istockphoto.com/id/534327120/es/vector/huella-de-pata-patr%C3%B3n-continuo.jpg?s=612x612&w=0&k=20&c=-m25R-h82bP-epyKhoxJhByZKe8ITgI-XLrpqQDRhbo=" alt="">
+  </div>
+  
+  <div class="login-box">
+
+    <img _ngcontent-xvp-c143="" src="assets/icon/logo.png" alt=" ">
+    <h1>Registrate Aqui</h1>
+    <form>
+      <!-- USERNAME INPUT -->
+      <label for="username">Usuario</label>
+      <input type="text" placeholder="Ingresa tu Usurio">
+  
+      <!-- PASSWORD INPUT -->
+      <label for="password">Contraseña</label>
+      <input type="password" placeholder="Ingresa tu contraseña">
+      <div style="text-align: center;">
+        <ion-button class="boton">Registrarte ahora</ion-button>
+        <ion-button class="boton" (click)="gotoLogin()">Ya tengo una cuenta</ion-button>
+      </div>
+    </form>
+  </div>
+  </ion-content>
+
+
+<ion-tab-bar slot="bottom">
+<ion-tab-button tab="home">
+<ion-icon name="cash-outline"></ion-icon>
+Recompensas
+</ion-tab-button>
+<ion-tab-button tab="about">
+<ion-icon name="radio"></ion-icon>
+Radar de Mascotas
+</ion-tab-button>
+<ion-tab-button tab="about" (click)="gotoHome()">
+<ion-icon name="information-circle-outline"></ion-icon>
+Acerca de
+</ion-tab-button>
+<ion-tab-button tab="about" (click)="gotoAccount()">
+<ion-icon name="person"></ion-icon>
+Mi Cuenta
+</ion-tab-button>
+</ion-tab-bar>

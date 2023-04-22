@@ -1,0 +1,38 @@
+:root{
+  .color1 {color: #2085d8;}
+  .color2 {color: #20b1d8;}
+  .color3 {color: #20dad9;}
+  .color4 {color: #cbefed;}
+  .color5 {color: #f8efed;}
+}
+
+ion-content{
+  --background: rgb(244, 155, 31);
+}
+
+.cuenta-interfaz{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-image: linear-gradient(to top,white 0%, #d86a20 100%);
+  border-radius: 2%;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(12, 12, 12),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.contenido-cuenta{
+  margin: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #f8efed;
+  height: auto;
+  color: black;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+ion-button{
+  --background:#f8efed;
+  color: black;
+}
