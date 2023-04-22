@@ -9,12 +9,13 @@ import { Router } from '@angular/router';
 export class RecompensasPage implements OnInit {
 
   constructor(private router: Router) { }
+  menuType: string = 'push';
 
   ngOnInit() {
   }
-  gotoHome(){
-    this.router.navigate(['/home'])
-  }  
+  gotoMapa(){
+    this.router.navigate(['/map-aviso'])
+  }   
 
   gotoLogin(){
     this.router.navigate(['/login'])
@@ -22,5 +23,9 @@ export class RecompensasPage implements OnInit {
 
   gotoRegister(){
     this.router.navigate(['/register'])
+  }
+
+  gotoRecompensas(){
+    this.router.navigate(['/recompensas'])
   }
 }

@@ -9,7 +9,6 @@ ion-content{
 }
 
 ion-toolbar{
-    --background:white;
     --border-color: white;
     padding: 10px;
     height: 100%;
@@ -21,4 +20,9 @@ ion-toolbar{
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 30px;
+}
+
+ion-card {
+    width: 80%;
+    margin: 10px auto;
 }
