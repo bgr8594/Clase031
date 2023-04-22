@@ -1,10 +1,9 @@
+<!DOCTYPE html>
 <div class="contenido-login">
-
-
   <p>Ingresa a tu <span>cuenta</span>:</p>
 
   <div>
-    <ion-item class="input" >
+    <ion-item class="input">
       <ion-label>Usuario:</ion-label>
       <ion-input placeholder="Ingresa tu Usuario"></ion-input>
     </ion-item>
@@ -21,11 +20,15 @@
     <p>o</p>
     <ion-button class="boton" (click)="gotoRegister()">Registrate</ion-button>
   </div>
-
 </div>
 
-<ion-fab slot="fixed" vertical="bottom" horizontal="center" (click)="gotoAccount()">
+<ion-fab
+  slot="fixed"
+  vertical="bottom"
+  horizontal="center"
+  (click)="gotoAccount()"
+>
   <ion-fab-button id="boton-esc__icono">
-    <ion-icon name="close-outline"></ion-icon>  
+    <ion-icon name="close-outline"></ion-icon>
   </ion-fab-button>
 </ion-fab>
