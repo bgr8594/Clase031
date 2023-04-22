@@ -3,22 +3,17 @@ ion-toolbar {
 }
 
 .buttonPedido {
-  color: #1c5115;
+  color: #168132;
 }
 
 .buttonBorrar {
-  color: #511515;
+  color: #791515;
   margin-left: 2%;
 }
 
 .buttonBorrar, .buttonPedido {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.5px;
-  background-color: transparentize($color: #b89c61, $amount: 0.3);
-  border-radius: 10px;
-  padding: 12px 25px 12px 25px;
-  font-size: 15px;
-  border-color: #b38f46;
+  background: #dfbd7375;
 }
 
 .center {
