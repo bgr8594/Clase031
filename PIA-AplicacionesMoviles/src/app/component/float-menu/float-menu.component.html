@@ -9,8 +9,8 @@
   <ion-header>
     <ion-toolbar>
       <ion-buttons slot="end">
-        <ion-button class="login" expand="block" routerLink="/login">Iniciar sesión</ion-button>
-        <ion-button class="registro" expand="block" routerLink="/registrar" >Registrarse</ion-button>
+        <ion-button class="interactive-element" class="login" expand="block" routerLink="/login">Iniciar sesión</ion-button>
+        <ion-button class="interactive-element" class="registro" expand="block" routerLink="/registrar" >Registrarse</ion-button>
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
@@ -22,7 +22,7 @@
   <ion-content id="menuFloat">
       <ion-list>
           <ion-menu-toggle *ngFor="let c of datosMenu">
-              <ion-item (click)="navegar(c.enlace)">
+              <ion-item class="interactive-element" (click)="navegar(c.enlace)">
                   <ion-icon name='{{c.icono}}'></ion-icon>
                   <ion-label>{{ c.nombre }}</ion-label>
               </ion-item>
