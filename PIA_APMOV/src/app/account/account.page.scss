@@ -7,12 +7,20 @@
 }
 
 // Globales
-ion-content{
-  --background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+.on-click {
+  --ripple-color: gray;
+  --color-activated : black;
+}
+.no-ripple{
+  --ripple-color: white;
+  --color-activated : black;
 }
 .icono-boton{
   color: gray;
   margin-right: 10px;
+}
+ion-content{
+  --background: rgb(235, 235, 235);
 }
 
 
@@ -34,6 +42,12 @@ ion-content{
   -moz-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
   box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
   // Colores y sombras
+
+  .cuenta-intefaz__nombre {
+    font-size: 2rem;
+    color: black;
+    font-family: Roboto;
+  }
 }
 
 // Interfaz del menu de opciones del usuario
@@ -52,20 +66,43 @@ ion-content{
   --ion-item-background: none;
 }
 
-.opciones__boton,
-.info-usuario{
+.opciones__boton{
   color: rgb(102, 100, 100);
   --border-color: rgb(239, 232, 232);
 }
-
-.info-usuario h3{
-  color: black;
-  font-size: 15px;
-}
-
 
 .botones-registro{
   --background:white;
   color: black;
 }
 
+// Botones de navegacion
+.tab-bar{
+  margin: 10px 10px;
+  border-radius: 10px;
+  --background: white;
+  --border:black;
+  -webkit-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
+  -moz-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
+  box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
+}
+
+.tab-bar__texto{
+  font-weight: bold;
+}
+
+.on-click-tab-bar{
+  color: gray;
+  transition: color 0.5s ease-in-out,
+              transform 0.5s ease-in-out;
+
+}
+.on-click-tab-bar:hover{
+  transform: translateY(-2px);  
+  .tab-bar__icono{
+    color: #2085d8;
+  }
+  .tab-bar__texto{
+    color: black;
+  }
+}

@@ -1,48 +1,76 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title class="titulo-recompensas">Recompensas</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu [type]="menuType" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-button expand="full" (click)="gotoRecompensas()"> 
+      <ion-icon name="paw-outline" class="tab-bar__icono"></ion-icon>
+      Mascotas Perdidas
+    </ion-button>
+    <ion-button expand="full" (click)="gotoMapa()">
+      <ion-icon name="radio" class="tab-bar__icono"></ion-icon>
+      Radar De Mascotas</ion-button>
+    <ion-button  [disabled]="true" expand="full">
+      <ion-icon name="person" class="tab-bar__icono"></ion-icon>
+      Cuenta</ion-button>
 
-<ion-content class="contenido">
+  </ion-content>
+</ion-menu>
 
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Sofia</ion-card-title>
-      <ion-card-subtitle>Angeles 246, Paseo de los Ángeles, 66470 San Nicolás de los Garza, N.L.</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Perdido hace 10 dias.
-      Recompensa: 2,500 MXN
-    </ion-card-content>
-  </ion-card> <!--Card-->
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Mascotas Perdidas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true">
 
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Ruffus</ion-card-title>
-      <ion-card-subtitle>Av. Las Puentes y, Las Puentes 3er Sector, 66460 San Nicolás de los Garza, N.L.</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Perdido hace 89 dias.
-      Recompensa: 5,500 MXN
-    </ion-card-content>
-  </ion-card> <!--Card-->
+    <ion-content class="contenido">
 
-  <ion-card>
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-    <ion-card-header>
-      <ion-card-title>Puffy</ion-card-title>
-      <ion-card-subtitle>Avenida Fundidora y, Adolfo Prieto S/N, Obrera, 64010 Monterrey, N.L.</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Perdido hace 3 dias.
-      Recompensa: 800 MXN
-    </ion-card-content>
-  </ion-card> <!--Card-->
-  
-</ion-content>
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <ion-card-header>
+          <ion-card-title>Sofia</ion-card-title>
+          <ion-card-subtitle>Angeles 246, Paseo de los Ángeles, 66470 San Nicolás de los Garza, N.L.</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Perdido hace 10 dias.
+          Recompensa: 2,500 MXN
+        </ion-card-content>
+      </ion-card> <!--Card-->
+    
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <ion-card-header>
+          <ion-card-title>Ruffus</ion-card-title>
+          <ion-card-subtitle>Av. Las Puentes y, Las Puentes 3er Sector, 66460 San Nicolás de los Garza, N.L.</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Perdido hace 89 dias.
+          Recompensa: 5,500 MXN
+        </ion-card-content>
+      </ion-card> <!--Card-->
+    
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <ion-card-header>
+          <ion-card-title>Puffy</ion-card-title>
+          <ion-card-subtitle>Avenida Fundidora y, Adolfo Prieto S/N, Obrera, 64010 Monterrey, N.L.</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Perdido hace 3 dias.
+          Recompensa: 800 MXN
+        </ion-card-content>
+      </ion-card> <!--Card-->
+      
+    </ion-content>
+  </ion-content>
+</div>

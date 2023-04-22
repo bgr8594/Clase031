@@ -13,7 +13,7 @@ export class AppComponent {
     this.router.navigate(['/account']);
   }
   gotoHome(){
-    this.router.navigate(['/home'])
+    this.router.navigate(['/map-aviso'])
   } 
 
   gotoRecompensas(){

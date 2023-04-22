@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { Router } from '@angular/router';
+
+
 declare var google:any;
 
 @Component({
@@ -11,7 +14,8 @@ export class MapAvisoPage implements OnInit {
   @ViewChild('map', { static: false }) mapElement!: ElementRef;
   map: any;
 
-  constructor(private platform: Platform) {}
+  constructor(private platform: Platform, private router: Router) {}
+  menuType: string = 'push';
 
   ngOnInit() {
     this.platform.ready().then(() => {
@@ -68,7 +72,9 @@ export class MapAvisoPage implements OnInit {
     event.target.reset();
   }
   
-  
+  gotoRecompensas(){
+    this.router.navigate(['/recompensas'])
+  }
 }
 
 

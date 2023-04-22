@@ -7,14 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./account.page.scss'],
 })
 export class AccountPage implements OnInit {
+  menuType: string = 'push';
 
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
-  gotoHome(){
-    this.router.navigate(['/home'])
+  gotoMapa(){
+    this.router.navigate(['/map-aviso'])
   }  
 
   gotoLogin(){
@@ -25,5 +26,11 @@ export class AccountPage implements OnInit {
     this.router.navigate(['/register'])
   }
 
+  gotoRecompensas(){
+    this.router.navigate(['/recompensas'])
+  }
 
+  accountLoged() {
+    return false;
+  }
 }

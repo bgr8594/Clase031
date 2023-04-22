@@ -1,4 +1,15 @@
 #map {
-  height: 400px;
-  width: 400px;
+  height: 80%;
+  width:100%;
+}
+
+.input{
+  --background: #FFFFFF;
+  --color: #30343f;
+  --border-color:white;
+  border-radius:10px;
+  margin-top:15px;
+  margin: 20px,0;
+  width: 100%;
+  --highlight-background: #e2e2e2;
 }

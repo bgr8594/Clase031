@@ -1,6 +1,6 @@
 *PIA-equipo6
 
-*INTEGRANTES Equipo 4:
+*INTEGRANTES Equipo 6:
    Ximena Guadalupe Mata Morales 1963226
    Tomás Uriel Garza Robledo 1844640
    Abel Antonio Castillo Valle 1965990
