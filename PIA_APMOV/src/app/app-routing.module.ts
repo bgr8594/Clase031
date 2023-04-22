@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'recompensas',
     loadChildren: () => import('./recompensas/recompensas.module').then( m => m.RecompensasPageModule)
   },
+  {
+    path: 'map-aviso',
+    loadChildren: () => import('./map-aviso/map-aviso.module').then( m => m.MapAvisoPageModule)
+  },
 ];
 
 @NgModule({
