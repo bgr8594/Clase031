@@ -13,8 +13,4 @@ export class HomePage {
   gotoAccount(){
       this.router.navigate(['/account']);
   }
-
-  gotoRecompensas(){
-    this.router.navigate(['/recompensas']);
-  }
 }

@@ -6,103 +6,33 @@
   .color5 {color: #f8efed;}
 }
 
-// Globales
-.on-click {
-  --ripple-color: gray;
-  --color-activated : black;
-}
-.no-ripple{
-  --ripple-color: white;
-  --color-activated : black;
-}
-.icono-boton{
-  color: gray;
-  margin-right: 10px;
-}
 ion-content{
-  --background: rgb(235, 235, 235);
+  --background: rgb(244, 155, 31);
 }
 
-
-// Interfaz de la cuenta del usuario
 .cuenta-interfaz{
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  // Alinear contenido
-
-  margin: 30px;
-  padding: 20px; 
-  // Darle tamanio
-
-  background: rgb(203,239,237);
-  background: linear-gradient(339deg, rgba(203,239,237,1) 0%, rgba(32,177,216,1) 65%, rgba(32,177,216,1) 100%);
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-image: linear-gradient(to top,white 0%, #d86a20 100%);
   border-radius: 2%;
-  -webkit-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  -moz-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  // Colores y sombras
-
-  .cuenta-intefaz__nombre {
-    font-size: 2rem;
-    color: black;
-    font-family: Roboto;
-  }
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(12, 12, 12),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-
-// Interfaz del menu de opciones del usuario
-.menu-opciones{
-  margin: 20px;
-  border-radius: 5px;
-  background-color: white;
+.contenido-cuenta{
+  margin: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #f8efed;
+  height: auto;
   color: black;
-  -webkit-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  -moz-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  padding: 10px 0 20px 0;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
-.opciones{
-  --ion-item-background: none;
-}
-
-.opciones__boton{
-  color: rgb(102, 100, 100);
-  --border-color: rgb(239, 232, 232);
-}
-
-.botones-registro{
-  --background:white;
+ion-button{
+  --background:#f8efed;
   color: black;
-}
-
-// Botones de navegacion
-.tab-bar{
-  margin: 10px 10px;
-  border-radius: 10px;
-  --background: white;
-  --border:black;
-  -webkit-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  -moz-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-}
-
-.tab-bar__texto{
-  font-weight: bold;
-}
-
-.on-click-tab-bar{
-  color: gray;
-  transition: color 0.5s ease-in-out,
-              transform 0.5s ease-in-out;
-
-}
-.on-click-tab-bar:hover{
-  transform: translateY(-2px);  
-  .tab-bar__icono{
-    color: #2085d8;
-  }
-  .tab-bar__texto{
-    color: black;
-  }
 }

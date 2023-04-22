@@ -1,12 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { environment } from 'src/environments/environment';
-
-const app = initializeApp(environment);
-const auth = getAuth(app);
-
 
 @Component({
   selector: 'app-register',
