@@ -26,6 +26,22 @@ const routes: Routes = [
   {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'pastel-choc-fresa',
+    loadChildren: () => import('./pastel-choc-fresa/pastel-choc-fresa.module').then( m => m.PastelChocFresaPageModule) 
+  },
+  {
+    path: 'solle',
+    loadChildren: () => import('./solle/solle.module').then( m => m.SollePageModule) 
+  },
+  {
+    path: 'brownie',
+    loadChildren: () => import('./brownie/brownie.module').then( m => m.BrowniePageModule) 
+  },
+  {
+    path: 'galletas',
+    loadChildren: () => import('./galletas/galletas.module').then( m => m.GalletasPageModule)
   }
 
 ];

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="reposteria">
+    <ion-title>Le Solle cachito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card align="center">
+    <img src="assets/img-menu/cachitoZanahoria.jpg" width="400" height="300"/>
+    <ion-card-header>
+      <ion-card-title>Le Solle cachito</ion-card-title>
+      <ion-card-subtitle>zanahoria</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      ¡Conoce nuestra deliciosa creación: el pastel Le Solle cachito! Este pastel te sorprenderá con su suave textura y su irresistible sabor a vainilla. Elaborado con una receta única y los mejores ingredientes, el pastel Le Solle cachito es el postre perfecto para cualquier ocasión.
+      Cada porción de nuestro pastel te transportará a un mundo de sabor y placer, gracias a su exquisita combinación de ingredientes. Además, su presentación es simplemente espectacular, con una decoración en forma de espiral y un toque de azúcar glas que le da un toque extra de dulzura.
+      ¡Anímate a probar nuestro pastel Le Solle cachito y haz de cualquier momento un momento especial! Haz tu pedido hoy mismo y sorprende a tus seres queridos con un postre que los dejará encantados.
+      <br>
+      PRECIO: $70 pesos mexicanos
+      <ion-item>
+        <ion-label>Cantidad:</ion-label>
+        <ion-input type="number" [(ngModel)]="cantidad"></ion-input>
+      </ion-item>
+      <ion-button [routerLink]="['/carrito']" color="reposteria">Añadir al carrito</ion-button>
+      <ion-button>Agregar a favoritos</ion-button>
+      
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>

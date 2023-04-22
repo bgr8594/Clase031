@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="reposteria">
+    <ion-title>Pastel de Chocolate y Fresa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card align="center">
+    <img src="assets/img-menu/pastelfresachocolate.jpg" width="400" height="300" />
+    <ion-card-header>
+      <ion-card-title>Pastel de Chocolate y Fresa</ion-card-title>
+      <ion-card-subtitle>Chocolate y Fresa</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      ¡Disfruta de nuestro delicioso pastel de chocolate y fresa! Este pastel es perfecto para satisfacer tus antojos de dulces. Es una mezcla perfecta entre el rico sabor a chocolate y la frescura de las fresas. Nuestro pastel es suave, húmedo y muy esponjoso, hecho con los mejores ingredientes de calidad.
+      Cada bocado de nuestro pastel te deleitará con el sabor del chocolate y la frescura de las fresas. Es ideal para compartir en cualquier evento especial o simplemente para darte un capricho en un día normal. Además, es un pastel que se ve tan bien como sabe, con un hermoso glaseado y adornos de fresas frescas.
+      ¡No esperes más para probar nuestro pastel de chocolate y fresa! ¡Haz tu pedido ahora y déjanos endulzar tu día!
+      <br>
+      PRECIO: $420 pesos mexicanos
+      <ion-item>
+        <ion-label>Cantidad:</ion-label>
+        <ion-input type="number" [(ngModel)]="cantidad"></ion-input>
+      </ion-item>
+      <ion-button [routerLink]="['/carrito']" color="reposteria">Añadir al carrito</ion-button>
+      <ion-button>Agregar a favoritos</ion-button>
+      
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>

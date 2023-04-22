@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="reposteria">
+    <ion-title>Brownie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card align="center">
+    <img src="assets/img-menu/browniedechocolate.jpg" width="300" height="450"/>
+    <ion-card-header>
+      <ion-card-title>Brownie</ion-card-title>
+      <ion-card-subtitle>Chocolate</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      ¡Prepárate para probar el mejor brownie de tu vida! En nuestra repostería, nos enorgullecemos de 
+      ofrecer un brownie de calidad suprema, hecho con los ingredientes más frescos y deliciosos.
+      Además, nuestro brownie tiene un toque especial: una capa crujiente en la parte superior, que le da 
+      una textura única y deliciosa. Esta capa es la combinación perfecta de dulce y crujiente, que complementa 
+      perfectamente la suavidad del brownie.No esperes más para probar nuestro delicioso brownie. ¡Ven a nuestra
+       repostería y date un gusto que nunca olvidarás!
+      <br>
+      PRECIO: $200 pesos mexicanos
+      <ion-item>
+        <ion-label>Cantidad:</ion-label>
+        <ion-input type="number" [(ngModel)]="cantidad"></ion-input>
+      </ion-item>
+      <ion-button [routerLink]="['/carrito']" color="reposteria">Añadir al carrito</ion-button>
+      <ion-button>Agregar a favoritos</ion-button>
+      
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>
+

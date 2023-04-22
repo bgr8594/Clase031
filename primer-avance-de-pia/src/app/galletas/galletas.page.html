@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="reposteria">
+    <ion-title>Galletas de mantequilla y mermelada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card align="center">
+    <img src="assets/img-menu/galletas.jpg" width="600" height="300"/>
+    <ion-card-header>
+      <ion-card-title>Galletas de mantequilla y mermelada</ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      ¡Déjate seducir por nuestras deliciosas galletas de mantequilla y mermelada! 
+      Cada bocado de estas galletas es una experiencia única de sabor, donde la suavidad de 
+      la mantequilla se combina con la dulzura de la mermelada, para crear una textura crujiente y 
+      deliciosa en tu paladar. Nuestras galletas están hechas con los mejores ingredientes de calidad, 
+      seleccionados con sumo cuidado para asegurarnos de que cada galleta sea perfecta. La mantequilla es
+       fresca y cremosa, lo que le da a nuestras galletas una textura suave y sedosa. Además, la mermelada
+        es casera, preparada con frutas frescas y azúcar natural, lo que le da un sabor auténtico y delicioso.
+      <br>
+      PRECIO: $25 pesos mexicanos
+      <ion-item>
+        <ion-label>Cantidad:</ion-label>
+        <ion-input type="number" [(ngModel)]="cantidad"></ion-input>
+      </ion-item>
+      <ion-button [routerLink]="['/carrito']" color="reposteria">Añadir al carrito</ion-button>
+      <ion-button>Agregar a favoritos</ion-button>
+      
+    </ion-card-content>
+
+
+  </ion-card>
+</ion-content>
+
