@@ -8,7 +8,7 @@ import { CatalogoPageRoutingModule } from './catalogo-routing.module';
 
 import { CatalogoPage } from './catalogo.page';
 
-import { IonicRatingModule } from 'ionic-rating';
+import { IonRatingStarsModule } from 'ion-rating-stars';
 
 @NgModule({
   imports: [
@@ -16,7 +16,7 @@ import { IonicRatingModule } from 'ionic-rating';
     FormsModule,
     IonicModule,
     CatalogoPageRoutingModule,
-    IonicRatingModule
+    IonRatingStarsModule
   ],
   declarations: [CatalogoPage]
 })

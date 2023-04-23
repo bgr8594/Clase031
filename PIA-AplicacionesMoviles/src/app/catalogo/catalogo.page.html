@@ -11,7 +11,7 @@
     <ion-row> <!--size="12" size-md="6" size-lg="4"  size-sm="6"-->
               <!--size="12" size-md="4" size-lg="3"  size-sm="6"-->
       <ion-col size="12" size-md="4" size-lg="4"  size-sm="6" *ngFor="let juego of juegos">
-        <ion-card >
+        <ion-card>
           <img [src]="juego.img">
           <ion-card-header>
             <ion-card-title>
@@ -21,9 +21,14 @@
           <ion-card-content>
             {{juego.descripcion}}
           </ion-card-content>
-          <ion-rating [rate]=juego.rate
-                      [readonly]=juego.read>
-          </ion-rating>
+          <ion-rating-stars [rating]=juego.rate
+                            [color]="'darkgrey'"
+                            [filledColor]="'orange'"
+                            [margin]="2"
+                            [size]="20"
+                            [disabled]=juego.read
+                            [opacity]="0.5"></ion-rating-stars>
+          <!--Dar click y ir a la pagina del juego-->
           <ion-button fill="clear">Action 1</ion-button>
         </ion-card>
       </ion-col>
