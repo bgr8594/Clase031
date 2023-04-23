@@ -1,0 +1,7 @@
+/*
+ * Public API Surface of ion-rating-stars
+ */
+export * from './lib/ion-rating-stars.service';
+export * from './lib/ion-rating-stars.component';
+export * from './lib/ion-rating-stars.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL2lvbi1yYXRpbmctc3RhcnMvc3JjL3B1YmxpYy1hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxjQUFjLGdDQUFnQyxDQUFDO0FBQy9DLGNBQWMsa0NBQWtDLENBQUM7QUFDakQsY0FBYywrQkFBK0IsQ0FBQyIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBQdWJsaWMgQVBJIFN1cmZhY2Ugb2YgaW9uLXJhdGluZy1zdGFyc1xuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL2lvbi1yYXRpbmctc3RhcnMuc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9pb24tcmF0aW5nLXN0YXJzLmNvbXBvbmVudCc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9pb24tcmF0aW5nLXN0YXJzLm1vZHVsZSc7XG4iXX0=
