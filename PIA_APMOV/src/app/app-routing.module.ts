@@ -23,6 +23,13 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
+<<<<<<< Updated upstream
+=======
+  {
+    path: 'radar',
+    loadChildren: () => import('./radar/radar.module').then( m => m.RadarPageModule)
+  },
+>>>>>>> Stashed changes
 ];
 
 @NgModule({

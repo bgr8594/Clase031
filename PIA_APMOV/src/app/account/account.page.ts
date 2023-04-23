@@ -25,5 +25,12 @@ export class AccountPage implements OnInit {
     this.router.navigate(['/register'])
   }
 
+<<<<<<< Updated upstream
+=======
+  gotoRadar(){
+    this.router.navigate(['/radar'])
+  }
+
+>>>>>>> Stashed changes
 
 }
