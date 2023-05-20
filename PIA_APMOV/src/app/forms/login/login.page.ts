@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { User } from '../../interface/user';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
+import { AlertController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-login',
@@ -9,20 +13,46 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
+  data = {
+    user: "",
+    password: ""
+  };
+
   constructor(
-    private router: Router,
+    private storage: Storage,
+    private alertController: AlertController,
+    private navCtrl: NavController
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
+    await this.storage.create();
   }
 
+  async loginUser() {
+    const user = await this.storage.get('user');
+    const password = await this.storage.get('password');
 
-
-  goToMapa() {
-    this.router.navigate(['/map-aviso']);
+    if (user === this.data.user && password === this.data.password) {
+      this.goToHome();
+    } else {
+      this.succesfullAlert();
+    }
   }
-  goToRegister(){
-    this.router.navigate(['/register']);
+
+  async goToHome() {
+    const user = await this.storage.get('user');
+    this.navCtrl.navigateForward('/account', { queryParams: { userName: user } });
+  }
+
+  async succesfullAlert() {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      subHeader: '',
+      message: 'El Usuario no existe o su contraseña es incorrecta.',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 
 }

@@ -38,20 +38,8 @@
   </ion-header>
   <ion-content [fullscreen]="true">
 
-    <ion-content>  
-      
-      <ion-card *ngFor="let mascota of mascotas">
-        <ion-card-header>
-          <ion-card-title>{{mascota.nombreMascota}}</ion-card-title>
-          <ion-card-subtitle>{{mascota.descripcion}}</ion-card-subtitle>
-        </ion-card-header>
-      
-        <ion-card-content>
-          Perdido hace {{mascota.fechaPerdido}}.
-          Recompensa: {{mascota.recompensa}} MXN
-        </ion-card-content>
-      </ion-card> <!--Card-->
-
+    <ion-content>
+      <div #map id="map"></div>
     </ion-content>
   </ion-content>
 </div>

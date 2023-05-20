@@ -5,22 +5,20 @@
 
   <div>
     <ion-item class="input" >
-      <ion-label>Correo:</ion-label>
-      <ion-input placeholder="Ingresa tu Correo"></ion-input>
+      <ion-label> Usuario:</ion-label>
+      <ion-input [(ngModel)]="data.user" placeholder="Ingresa tu usuario!"></ion-input>
     </ion-item>
 
     <ion-item class="input">
       <ion-label>Contraseña:</ion-label>
-      <ion-input type="password" value="password"></ion-input>
+      <ion-input [(ngModel)]="data.password" type="password" value="password" placeholder="******"></ion-input>
     </ion-item>
   </div>
-
-  <ion-label id="forgot_psswrd">Olvide mi contraseña</ion-label>
   
   <div class="botones">
-    <ion-button class="boton" (click)="goToMapa()">Iniciar sesion</ion-button>
+    <ion-button class="boton" (click)="loginUser()">Iniciar sesion</ion-button>
     <ion-label>o</ion-label>
-    <ion-button class="boton" (click)="goToRegister()">Registrate</ion-button> 
+    <ion-button class="boton" [routerLink]="['/register']" routerDirection="root" routerLinkActive="active-item">Registrate</ion-button> 
   </div>
 
 </div>

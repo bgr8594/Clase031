@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-recompensas',
@@ -8,24 +10,21 @@ import { Router } from '@angular/router';
 })
 export class RecompensasPage implements OnInit {
 
-  constructor(private router: Router) { }
-  menuType: string = 'push';
+  constructor(private router: Router, private navCtrl: NavController) { }
+  menuType: string = 'overlay';
+  mascotas: any[] = [];
+
 
   ngOnInit() {
-  }
-  gotoMapa(){
-    this.router.navigate(['/map-aviso'])
-  }   
-
-  gotoLogin(){
-    this.router.navigate(['/login'])
+    this.mascotas = JSON.parse(localStorage.getItem("Mascotas") || "[]");
+    
   }
 
-  gotoRegister(){
-    this.router.navigate(['/register'])
-  }
 
-  gotoRecompensas(){
-    this.router.navigate(['/recompensas'])
+  gotoMapa() {
+    this.navCtrl.navigateForward('/map-aviso');
+  }
+  gotoRecompensas() {
+    this.navCtrl.navigateForward('/recompensas');
   }
 }

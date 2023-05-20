@@ -20,7 +20,7 @@
   margin-right: 10px;
 }
 ion-content{
-  --background: rgb(235, 235, 235);
+  --background: url("../../img/fondoMascotas.jpg") no-repeat center center / cover;
 }
 
 
@@ -30,13 +30,12 @@ ion-content{
   flex-direction: column;
   align-items: center; 
   // Alinear contenido
-
-  margin: 30px;
+  margin: 50px auto;
   padding: 20px; 
+  width: 80%;
   // Darle tamanio
 
-  background: rgb(203,239,237);
-  background: linear-gradient(339deg, rgba(203,239,237,1) 0%, rgba(32,177,216,1) 65%, rgba(32,177,216,1) 100%);
+  background: white;
   border-radius: 2%;
   -webkit-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
   -moz-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
@@ -47,6 +46,7 @@ ion-content{
     font-size: 2rem;
     color: black;
     font-family: Roboto;
+    text-transform: uppercase;
   }
 }
 
@@ -54,21 +54,24 @@ ion-content{
 .menu-opciones{
   margin: 20px;
   border-radius: 5px;
-  background-color: white;
   color: black;
+  background-color: white;
   -webkit-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
   -moz-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
   box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
   padding: 10px 0 20px 0;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .opciones{
-  --ion-item-background: none;
+  --ion-item-background: rgb(255, 255, 255);
 }
 
 .opciones__boton{
-  color: rgb(102, 100, 100);
-  --border-color: rgb(239, 232, 232);
+  color: rgb(0, 0, 0);
 }
 
 .botones-registro{
@@ -76,33 +79,18 @@ ion-content{
   color: black;
 }
 
-// Botones de navegacion
-.tab-bar{
-  margin: 10px 10px;
-  border-radius: 10px;
-  --background: white;
-  --border:black;
-  -webkit-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  -moz-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-  box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.07);
-}
+ion-button {
+  --background: #ffffff;
+ 
 
-.tab-bar__texto{
-  font-weight: bold;
-}
+  --color: rgb(0, 0, 5);
 
-.on-click-tab-bar{
-  color: gray;
-  transition: color 0.5s ease-in-out,
-              transform 0.5s ease-in-out;
+  --border-color: #000;
+  --border-style: solid;
+  --border-width: 1px;
 
-}
-.on-click-tab-bar:hover{
-  transform: translateY(-2px);  
-  .tab-bar__icono{
-    color: #2085d8;
-  }
-  .tab-bar__texto{
-    color: black;
-  }
+  --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+
+  --padding-top: 10px;
+  --padding-bottom: 10px;
 }

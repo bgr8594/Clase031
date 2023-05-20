@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular';
+
 
 @Component({
   selector: 'app-account',
@@ -7,30 +11,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./account.page.scss'],
 })
 export class AccountPage implements OnInit {
-  menuType: string = 'push';
+  menuType: string = 'overlay';
+  nombreUsuario: string = '';
 
-  constructor(private router: Router) { }
+  constructor(
+    private route: ActivatedRoute,
+    private storage: Storage
 
-  ngOnInit() {
+  ) { }
+
+
+  async ngOnInit() {
+    await this.storage.create();
+
+    this.nombreUsuario = await this.storage.get('user');
   }
 
-  gotoMapa(){
-    this.router.navigate(['/map-aviso'])
-  }  
-
-  gotoLogin(){
-    this.router.navigate(['/login'])
-  }
-
-  gotoRegister(){
-    this.router.navigate(['/register'])
-  }
-
-  gotoRecompensas(){
-    this.router.navigate(['/recompensas'])
-  }
-
-  accountLoged() {
-    return false;
-  }
 }

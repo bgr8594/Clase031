@@ -5,19 +5,28 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    <ion-button expand="full" (click)="gotoRecompensas()"> 
+
+    <ion-button expand="full" [routerLink]="['/recompensas']" routerDirection="root" routerLinkActive="active-item">
       <ion-icon name="paw-outline" class="tab-bar__icono"></ion-icon>
       Mascotas Perdidas
     </ion-button>
-    <ion-button expand="full" (click)="gotoMapa()">
-      <ion-icon name="radio" class="tab-bar__icono"></ion-icon>
-      Radar De Mascotas</ion-button>
-    <ion-button  disabled={{accountLoged()}} expand="full">
-      <ion-icon name="person" class="tab-bar__icono"></ion-icon>
-      Cuenta</ion-button>
 
+    <ion-button expand="full" [routerLink]="['/radar-mascotas']" routerDirection="root" routerLinkActive="active-item">
+      <ion-icon name="compass-outline"></ion-icon>
+      Radar de Mascotas
+    </ion-button>
+
+    <ion-button expand="full" [routerLink]="['/map-aviso']" routerDirection="root" routerLinkActive="active-item">
+      <ion-icon name="location-outline"></ion-icon>
+      Agregar Mascotas</ion-button>
+
+    <ion-button color="danger" expand="full" [routerLink]="['/account']" routerDirection="root" routerLinkActive="active-item">
+      <ion-icon name="person" class="tab-bar__icono"></ion-icon>
+      Cuenta
+    </ion-button>
   </ion-content>
 </ion-menu>
+
 <div class="ion-page" id="main-content">
   <ion-header>
     <ion-toolbar>
@@ -31,31 +40,23 @@
 
     <div class="cuenta-interfaz">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-circle" width="200" height="200"
-        viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round"
+        viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round"
         stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <circle cx="12" cy="12" r="9" />
         <circle cx="12" cy="10" r="3" />
         <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855" />
       </svg> <!--IMAGEN-->
-      <ion-label class="cuenta-intefaz__nombre">Usuario</ion-label>
-      <!--Aqui va el nombre del usuario, inyectado desde Firebase-->
-
-      <!-- <ion-button [routerLink]="['/login']" class="botones-registro">Iniciar sesion</ion-button>
-      <ion-button [routerLink]="['/register']" class="botones-registro">Crear una cuenta</ion-button> -->
+      <ion-icon name="paw-outline" class="tab-bar__icono"></ion-icon>
+      <ion-label class="cuenta-intefaz__nombre">{{nombreUsuario}}</ion-label>
     </div>
 
     <div class="menu-opciones">
       <ion-list class="opciones" lines="full">
-        <ion-item button class="opciones__boton on-click">
-          <ion-icon class="icono-boton" name="paw-outline"></ion-icon>
-          <ion-label>Tus Mascotas</ion-label>
-          <ion-icon class="icono-boton" name="arrow-forward"></ion-icon>
-        </ion-item> <!-- boton-->
-
-        <ion-item button class="opciones__boton on-click">
-          <ion-icon class="icono-boton" name="cog-outline"></ion-icon>
-          <ion-label>Configuracion</ion-label>
+        
+        <ion-item button class="opciones__boton on-click" [routerLink]="['/login']" routerDirection="root" routerLinkActive="active-item">
+          <ion-icon name="log-out-outline"></ion-icon>
+          <ion-label>Cerrar Sesión</ion-label>
           <ion-icon class="icono-boton" name="arrow-forward"></ion-icon>
         </ion-item> <!-- boton-->
 
@@ -64,5 +65,3 @@
 
   </ion-content>
 </div>
-
-

@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'map-aviso',
     loadChildren: () => import('./map-aviso/map-aviso.module').then( m => m.MapAvisoPageModule)
   },
+  {
+    path: 'radar-mascotas',
+    loadChildren: () => import('./radar-mascotas/radar-mascotas.module').then( m => m.RadarMascotasPageModule)
+  },
 ];
 
 @NgModule({
