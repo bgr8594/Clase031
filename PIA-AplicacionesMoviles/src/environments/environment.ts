@@ -4,8 +4,14 @@
 
 export const environment = {
   production: false,
-  //Aqui se pone la api de Firebase 
-  
+  firebaseConfig : {
+  apiKey: "AIzaSyBYn5Tn2jMqlXA74pQ2nYL3C9q31xaeqAY",
+  authDomain: "login-pia.firebaseapp.com",
+  projectId: "login-pia",
+  storageBucket: "login-pia.appspot.com",
+  messagingSenderId: "619669098434",
+  appId: "1:619669098434:web:3eb4fef98e0b0fdcdc905b"
+  },
 };
 
 /*

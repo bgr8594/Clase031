@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuardGuard } from './service/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
         path: 'valoracion',
         loadChildren: () => import('./valoracion/valoracion.module').then( m => m.ValoracionPageModule)
       },
-    ]
+    ],
+   //canActivate: [AuthGuardGuard] Poner esto para una pagina que se ocupe el inicio de sesion.
   },
   {
     path: '',

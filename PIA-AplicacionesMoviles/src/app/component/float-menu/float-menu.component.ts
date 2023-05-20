@@ -16,7 +16,7 @@ export class FloatMenuComponent  implements OnInit {
     {nombre: 'home',enlace:'/home',
     icono:'home-outline'},
     {nombre: 'Catalogo', enlace: '/main/catalogo',
-    icono: 'folder-outline'}
+    icono: 'folder-outline'},
     
   ];
 
