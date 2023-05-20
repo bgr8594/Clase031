@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iniciar sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #1db954;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .login-form {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .form-field {
+            margin-bottom: 10px;
+        }
+        
+        .form-field label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .form-field input[type="text"] {
+            width: 300px;
+            padding: 5px;
+        }
+        
+        .form-field input[type="submit"] {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Iniciar sesión</h1>
+    </header>
+    <main>
+        <form class="login-form">
+            <div class="form-field">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="form-field">
+                <input type="submit" value="Ingresar">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #1db954;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .song-info {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .song-info h2 {
+            margin: 0;
+        }
+        
+        .song-info p {
+            margin: 10px 0;
+        }
+        
+        .cta-button {
+            background-color: #1db954;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido(a) a la Página Principal</h1>
+    </header>
+    <main>
+        <div class="song-info">
+            <h2>Canción Aleatoria</h2>
+            <p><strong>Nombre:</strong> Canción Aleatoria</p>
+            <p><strong>Artista:</strong> Artista Aleatorio</p>
+            <p><strong>Género:</strong> Género Aleatorio</p>
+        </div>
+        <p>
+            ¿Deseas escuchar la canción? ¡Regístrate ahora!
+            <a href="registro.html" class="cta-button">Registrarse</a>
+        </p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Usuario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #1db954;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .user-info {
+            display: inline-block;
+            text-align: left;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .user-info h2 {
+            margin: 0;
+        }
+        
+        .user-info p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido(a) Usuario</h1>
+    </header>
+    <main>
+        <div class="user-info">
+            <h2>Información de Usuario</h2>
+            <p><strong>Nombre:</strong> Usuario Ejemplo</p>
+            <p><strong>Edad:</strong> 25 años</p>
+            <p><strong>Género:</strong> Masculino</p>
+            <p><strong>Nombre de Usuario:</strong> usuario123</p>
+            <p><strong>Correo Electrónico:</strong> usuario@example.com</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class AutenticacionUsuario {
+    public static void main(String[] args) {
+        // Datos de usuarios existentes
+        String[] usuariosExistentes = { "usuario1", "usuario2", "usuario3" };
+
+        // Solicitar nombre de usuario
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su nombre de usuario: ");
+        String nombreUsuario = scanner.nextLine();
+
+        // Verificar si el usuario existe
+        boolean usuarioExiste = false;
+        for (String usuario : usuariosExistentes) {
+            if (usuario.equals(nombreUsuario)) {
+                usuarioExiste = true;
+                break;
+            }
+        }
+
+        // Mostrar resultado de autenticación
+        if (usuarioExiste) {
+            System.out.println("¡Usuario autenticado correctamente!");
+        } else {
+            System.out.println("Usuario no encontrado. La autenticación ha fallado.");
+        }
+    }
+}

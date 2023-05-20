@@ -1,0 +1,89 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ModificarCancion {
+    public static void main(String[] args) {
+        // Lista de canciones registradas
+        List<Cancion> canciones = new ArrayList<>();
+        canciones.add(new Cancion("Cancion1", "Artista1", "Genero1"));
+        canciones.add(new Cancion("Cancion2", "Artista2", "Genero2"));
+        canciones.add(new Cancion("Cancion3", "Artista3", "Genero3"));
+
+        // Mostrar canciones disponibles
+        System.out.println("Canciones registradas:");
+        for (int i = 0; i < canciones.size(); i++) {
+            Cancion cancion = canciones.get(i);
+            System.out.println((i + 1) + ". " + cancion);
+        }
+
+        // Solicitar número de canción a modificar
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el número de canción a modificar: ");
+        int numeroCancion = scanner.nextInt();
+
+        // Verificar número de canción válido
+        if (numeroCancion >= 1 && numeroCancion <= canciones.size()) {
+            Cancion cancionSeleccionada = canciones.get(numeroCancion - 1);
+
+            // Solicitar nuevos datos de la canción
+            scanner.nextLine(); // Limpiar el búfer
+            System.out.print("Ingrese el nuevo nombre de la canción: ");
+            String nuevoNombre = scanner.nextLine();
+            System.out.print("Ingrese el nuevo artista de la canción: ");
+            String nuevoArtista = scanner.nextLine();
+            System.out.print("Ingrese el nuevo género de la canción: ");
+            String nuevoGenero = scanner.nextLine();
+
+            // Modificar la canción seleccionada
+            cancionSeleccionada.setNombre(nuevoNombre);
+            cancionSeleccionada.setArtista(nuevoArtista);
+            cancionSeleccionada.setGenero(nuevoGenero);
+
+            System.out.println("La canción ha sido modificada exitosamente.");
+        } else {
+            System.out.println("El número de canción ingresado no es válido.");
+        }
+    }
+}
+
+class Cancion {
+    private String nombre;
+    private String artista;
+    private String genero;
+
+    public Cancion(String nombre, String artista, String genero) {
+        this.nombre = nombre;
+        this.artista = artista;
+        this.genero = genero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getArtista() {
+        return artista;
+    }
+
+    public void setArtista(String artista) {
+        this.artista = artista;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    @Override
+    public String toString() {
+        return "Cancion [nombre=" + nombre + ", artista=" + artista + ", genero=" + genero + "]";
+    }
+}
