@@ -1,0 +1,41 @@
+{
+  "data":
+  [
+    {
+      "id": 1,
+      "nombre": "Pastel de Chocolate y Fresa",
+      "sabor": "Chocolate y Fresa",
+      "precio":420,
+      "imagen":"pastelfresachocolate.jpg",
+      "router": "pastel-choc-fresa",
+      "descrip": "¡Disfruta de nuestro delicioso pastel de chocolate y fresa! Este pastel es perfecto para satisfacer tus antojos de dulces. Es una mezcla perfecta entre el rico sabor a chocolate y la frescura de las fresas. Nuestro pastel es suave, húmedo y muy esponjoso, hecho con los mejores ingredientes de calidad. Cada bocado de nuestro pastel te deleitará con el sabor del chocolate y la frescura de las fresas. Es ideal para compartir en cualquier evento especial o simplemente para darte un capricho en un día normal. Además, es un pastel que se ve tan bien como sabe, con un hermoso glaseado y adornos de fresas frescas.¡No esperes más para probar nuestro pastel de chocolate y fresa! ¡Haz tu pedido ahora y déjanos endulzar tu día!"
+    },
+    {
+      "id": 2,
+      "nombre": "Le Solle cachito",
+      "sabor": "zanahoria",
+      "precio":70,
+      "imagen":"cachitoZanahoria.jpg",
+      "router":"sole",
+      "descrip":"¡Conoce nuestra deliciosa creación: el pastel Le Solle cachito! Este pastel te sorprenderá con su suave textura y su irresistible sabor a vainilla. Elaborado con una receta única y los mejores ingredientes, el pastel Le Solle cachito es el postre perfecto para cualquier ocasión. Cada porción de nuestro pastel te transportará a un mundo de sabor y placer, gracias a su exquisita combinación de ingredientes. Además, su presentación es simplemente espectacular, con una decoración en forma de espiral y un toque de azúcar glas que le da un toque extra de dulzura. ¡Anímate a probar nuestro pastel Le Solle cachito y haz de cualquier momento un momento especial! Haz tu pedido hoy mismo y sorprende a tus seres queridos con un postre que los dejará encantados."
+    },
+    {
+      "id": 3,
+      "nombre": "Brownie",
+      "sabor": "Chocolate",
+      "precio":200,
+      "imagen":"browniedechocolate.jpg",
+      "router":"brownie",
+      "descrip":"¡Prepárate para probar el mejor brownie de tu vida! En nuestra repostería, nos enorgullecemos de ofrecer un brownie de calidad suprema, hecho con los ingredientes más frescos y deliciosos. Además, nuestro brownie tiene un toque especial: una capa crujiente en la parte superior, que le da una textura única y deliciosa. Esta capa es la combinación perfecta de dulce y crujiente, que complementa perfectamente la suavidad del brownie.No esperes más para probar nuestro delicioso brownie. ¡Ven a nuestra repostería y date un gusto que nunca olvidarás!"
+    },
+    {
+      "id": 4,
+      "nombre": "Galletas de mantequilla y mermelada",
+      "sabor": "Mermelada",
+      "precio":25,
+      "imagen":"galletas.jpg",
+      "router":"galletas",
+      "descrip":"¡Déjate seducir por nuestras deliciosas galletas de mantequilla y mermelada! Cada bocado de estas galletas es una experiencia única de sabor, donde la suavidad de la mantequilla se combina con la dulzura de la mermelada, para crear una textura crujiente y deliciosa en tu paladar. Nuestras galletas están hechas con los mejores ingredientes de calidad, seleccionados con sumo cuidado para asegurarnos de que cada galleta sea perfecta. La mantequilla es fresca y cremosa, lo que le da a nuestras galletas una textura suave y sedosa. Además, la mermelada es casera, preparada con frutas frescas y azúcar natural, lo que le da un sabor auténtico y delicioso."
+    }
+  ]
+}

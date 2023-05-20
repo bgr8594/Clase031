@@ -9,6 +9,7 @@ import { CartService } from '../cart.service';
 })
 export class CartPage implements OnInit {
 
+
   selectedItems = [];
   total = 0;
 
@@ -22,12 +23,12 @@ export class CartPage implements OnInit {
     let selected = {};
 
     for(let obj of items){
-      /*selected[obj.id] = {...obj, count:1}; */
+      //selected[obj.id] = {...obj, count:1};
     }
 
-    /* this.selectedItems = Object.keys(selected).map(key => selected[key]) */
+    //this.selectedItems = Object.keys(selected).map(key => selected[key]) */
     console.log('items: ', this.selectedItems);
-    /*this.total = this.selectedItems.reduce((a,b) => a + (b.quantity *b.price), 0 );*/
+    //this.total = this.selectedItems.reduce((a,b) => a + (b.cantidad *b.precio), 0 );*/
   }
 
   remove(){

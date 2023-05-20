@@ -11,12 +11,9 @@ export class CartService {
     return this.cart;
   }
 
-  /*
-  addProduct(product){
+  /*addProduct(product){
     this.cart.push(product);
-  }
-  */
-
+  }*/
 
   removeCart(){
     this.cart = [];
