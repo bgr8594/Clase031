@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Catalogo } from "../interface/catalogo";
+import {  } from "module";
 
 @Component({
   selector: 'app-valoracion',
@@ -11,5 +13,7 @@ export class ValoracionPage implements OnInit {
 
   ngOnInit() {
   }
+
+  
 
 }

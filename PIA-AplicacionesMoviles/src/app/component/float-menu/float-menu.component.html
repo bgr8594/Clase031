@@ -4,17 +4,13 @@
           <ion-menu-button></ion-menu-button>
       </ion-buttons>
 
-      <ion-title>CitricalGaming</ion-title>
+  <ion-title>CitricalGaming</ion-title>
+  <ion-buttons slot="end">
+    <ion-button class="login" expand="block" routerLink="/login">Iniciar sesión</ion-button>
+    <ion-button class="registro" expand="block" routerLink="/registrar" >Registrarse</ion-button>
+    <ion-button class="registro" expand="block" (click)="onLogout()" >logout</ion-button>
+  </ion-buttons>
   </ion-toolbar>
-  <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="end">
-        <ion-button class="login" expand="block" routerLink="/login">Iniciar sesión</ion-button>
-        <ion-button class="registro" expand="block" routerLink="/registrar" >Registrarse</ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  
 
 
 </ion-header>

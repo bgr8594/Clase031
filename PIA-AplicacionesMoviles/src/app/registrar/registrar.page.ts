@@ -25,14 +25,14 @@ export class RegistrarPage implements OnInit {
 
   ngOnInit() {
   }
-
+/*
   submitForm(){
     if(this.formRegister.valid){
       this.user.email = this.formRegister.get('email').value;
       this.user.password = this.formRegister.get('password').value;
       this.onRegister();
     }
-  }
+  }*/
 
   ionViewWillEnter(){
     this.formRegister.reset();

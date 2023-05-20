@@ -16,7 +16,8 @@ const routes: Routes = [
       },
       {
         path: 'valoracion',
-        loadChildren: () => import('./valoracion/valoracion.module').then( m => m.ValoracionPageModule)
+        loadChildren: () => import('./valoracion/valoracion.module').then( m => m.ValoracionPageModule),
+        canActivate: [AuthGuardGuard]
       },
     ],
    //canActivate: [AuthGuardGuard] Poner esto para una pagina que se ocupe el inicio de sesion.
@@ -33,7 +34,8 @@ const routes: Routes = [
   {
     path: 'registrar',
     loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
-  }, //Iba Valoracion
+  }, 
+//Iba Valoracion
 ];
 
 @NgModule({

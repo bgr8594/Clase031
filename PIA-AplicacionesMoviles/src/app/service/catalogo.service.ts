@@ -1,13 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Catalogo } from '../interface/catalogo';
-import { Router } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { Catalogo } from "../interface/catalogo";
 
-@Component({
-  selector: 'app-catalogo',
-  templateUrl: './catalogo.page.html',
-  styleUrls: ['./catalogo.page.scss'],
+@Injectable({
+  providedIn: 'root'
 })
-export class CatalogoPage implements OnInit {
+export class CatalogoService {
 
   juegos: Catalogo[] = [
     {
@@ -33,7 +30,7 @@ export class CatalogoPage implements OnInit {
     },
     {
       nombre: 'Hi-Fi Rush',
-      descripcion: 'Juego de tipo hack n´ slash con diversas mecánicas de ritmo y plataformas',
+      descripcion: 'Juego de tipo hack slash con diversas mecánicas de ritmo y plataformas',
       img: 'assets/img/HiFiRush.png',
       rate: 4,
       read: true
@@ -55,13 +52,5 @@ export class CatalogoPage implements OnInit {
 
   ]
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-  }
-
-  onVermas(){
-    this.router.navigate(['/main/valoracion'])
-  }
-
+  constructor() { }
 }

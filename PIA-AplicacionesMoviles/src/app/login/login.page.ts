@@ -31,8 +31,8 @@ export class LoginPage implements OnInit {
     this.autSvc.onLogin(this.user).then((user:any)=>{
       if(user!=null && user.code ==undefined){
         console.log('Successfully logged in!');
-        this.menuService.setTitle("Catalogo")//Aqui se cambia la ruta.
-        this.router.navigate(['/main/catalogo']); //this
+        this.menuService.setTitle("Valoracion")//Aqui se cambia la ruta.
+        this.router.navigate(['/main/valoracion']); //this
       }
       else{
         if(user.code){
