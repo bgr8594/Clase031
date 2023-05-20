@@ -53,12 +53,12 @@ export class RadarMascotasPage implements OnInit {
 
     this.mascotas.forEach((mascota) => {
       this.addMarker(mascota.latitud, mascota.longitud, mascota.nombreMascota)
-      console.log(mascota.nombreMascota)
+
     });
 
   }
 
-  addMarker(latitud: string, longitud: string, nombreMascota: string) {    
+  addMarker(latitud: string, longitud: string, nombreMascota: string) {
     this.marker = new google.maps.Marker({
       position: { lat: parseFloat(latitud), lng: parseFloat(longitud) },
       icon: this.svgMarker,
@@ -66,5 +66,6 @@ export class RadarMascotasPage implements OnInit {
       title: nombreMascota
     });
   }
+
 
 }

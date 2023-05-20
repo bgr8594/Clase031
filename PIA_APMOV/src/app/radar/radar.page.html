@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>radar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map"></div> 
+</ion-content>
+
+
+<form (submit)="addMarker($event)">
+  <label>
+    Nombre de la mascota perdida:
+    <input type="text" name="nombre">
+  </label>
+  <br>
+  <label>
+    Dirección donde se perdió:
+    <input type="text" name="direccion">
+  </label>
+  <br>
+  <label>
+    Descripción:
+    <textarea name="descripcion"></textarea>
+  </label>
+  <br>
+  <button type="submit">Agregar aviso</button>
+</form>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="home">
+    <ion-icon name="cash-outline"></ion-icon>
+    Recompensas
+  </ion-tab-button>
+  <ion-tab-button tab="about" (click)="gotoRadar()">
+    <ion-icon name="radio"></ion-icon>
+    Radar de Mascotas
+  </ion-tab-button>
+  <ion-tab-button tab="about" (click)="gotoHome()">
+    <ion-icon name="information-circle-outline"></ion-icon>
+    Acerca de
+  </ion-tab-button>
+  <ion-tab-button tab="about" (click)="gotoAcount()">
+    <ion-icon name="person"></ion-icon>
+    Mi Cuenta
+  </ion-tab-button>
+</ion-tab-bar>

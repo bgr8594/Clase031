@@ -1,19 +1,25 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+<<<<<<< HEAD:PIA_APMOV/src/app/map-aviso/map-aviso.page.ts
 import { NavController } from '@ionic/angular';
 import { Storage } from '@ionic/storage-angular';
 
 declare var google: any;
+=======
+import { Platform } from '@ionic/angular';
+
+declare var google:any;
+>>>>>>> 07e8629a7fce2aa29667f1eeeb2ba8adced1dfac:PIA_APMOV/src/app/radar/radar.page.ts
 
 @Component({
-  selector: 'app-map-aviso',
-  templateUrl: './map-aviso.page.html',
-  styleUrls: ['./map-aviso.page.scss'],
+  selector: 'app-radar',
+  templateUrl: './radar.page.html',
+  styleUrls: ['./radar.page.scss'],
 })
-export class MapAvisoPage implements OnInit {
+export class RadarPage implements OnInit {
   @ViewChild('map', { static: false }) mapElement!: ElementRef;
   map: any;
+<<<<<<< HEAD:PIA_APMOV/src/app/map-aviso/map-aviso.page.ts
 
   constructor(private platform: Platform, private router: Router, private navCtrl: NavController, private storage: Storage,
   ) { }
@@ -41,6 +47,9 @@ export class MapAvisoPage implements OnInit {
     scale: 0.1,
     anchor: new google.maps.Point(0, 20),
   };
+=======
+  constructor(private router: Router,private platform: Platform) { }
+>>>>>>> 07e8629a7fce2aa29667f1eeeb2ba8adced1dfac:PIA_APMOV/src/app/radar/radar.page.ts
 
   ngOnInit() {
     this.mascotas = JSON.parse(localStorage.getItem("Mascotas") || "[]");
@@ -66,6 +75,7 @@ export class MapAvisoPage implements OnInit {
     });
     this.marker = new google.maps.Marker({
       map: this.map,
+      title: "",
       icon: this.svgMarker
     });
 
@@ -75,11 +85,31 @@ export class MapAvisoPage implements OnInit {
     this.marker.setPosition(this.direccion);
   }
 
+<<<<<<< HEAD:PIA_APMOV/src/app/map-aviso/map-aviso.page.ts
   agregarMascota() {
     this.mascotas.push(this.mascota);
     localStorage.setItem('Mascotas', JSON.stringify(this.mascotas));
-    this.mascotas = JSON.parse(localStorage.getItem("Mascotas") || "[]");
+=======
+  gotoHome(){
+    this.router.navigate(['/home'])
+  }  
+
+  gotoLogin(){
+    this.router.navigate(['/login'])
+>>>>>>> 07e8629a7fce2aa29667f1eeeb2ba8adced1dfac:PIA_APMOV/src/app/radar/radar.page.ts
   }
+
+  gotoRegister(){
+    this.router.navigate(['/register'])
+  }
+
+  gotoRadar(){
+    this.router.navigate(['/radar'])
+  }
+
+  gotoAcount(){
+    this.router.navigate(['/account'])
+  }
+
+
 }
-
-
