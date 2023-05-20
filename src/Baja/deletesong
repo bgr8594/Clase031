@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Cancion {
+    private String nombre;
+    private String artista;
+    private String genero;
+
+    public Cancion(String nombre, String artista, String genero) {
+        this.nombre = nombre;
+        this.artista = artista;
+        this.genero = genero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getArtista() {
+        return artista;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+}
+
+public class BajaCancion {
+    public static void main(String[] args) {
+        List<Cancion> canciones = new ArrayList<>();
+        canciones.add(new Cancion("Cancion1", "Artista1", "Genero1"));
+        canciones.add(new Cancion("Cancion2", "Artista2", "Genero2"));
+        canciones.add(new Cancion("Cancion3", "Artista3", "Genero3"));
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el nombre de la canción a dar de baja: ");
+        String nombreCancion = scanner.nextLine();
+
+        boolean cancionEncontrada = false;
+        for (Cancion cancion : canciones) {
+            if (cancion.getNombre().equalsIgnoreCase(nombreCancion)) {
+                canciones.remove(cancion);
+                cancionEncontrada = true;
+                System.out.println("La canción ha sido dada de baja exitosamente.");
+                break;
+            }
+        }
+
+        if (!cancionEncontrada) {
+            System.out.println("No se encontró la canción en la lista.");
+        }
+    }
+}

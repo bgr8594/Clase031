@@ -1,0 +1,92 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Usuario {
+    private String nombre;
+    private int edad;
+    private String genero;
+    private String nombreUsuario;
+    private String correo;
+
+    public Usuario(String nombre, int edad, String genero, String nombreUsuario, String correo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.genero = genero;
+        this.nombreUsuario = nombreUsuario;
+        this.correo = correo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public String getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+}
+
+public class AltaUsuarios {
+    public static void main(String[] args) {
+        List<Usuario> usuarios = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        String opcion = "";
+
+        while (!opcion.equals("3")) {
+            System.out.println("\n---- Menú ----");
+            System.out.println("1. Dar de alta usuario");
+            System.out.println("2. Mostrar usuarios");
+            System.out.println("3. Salir");
+            System.out.print("Selecciona una opción: ");
+            opcion = scanner.nextLine();
+
+            if (opcion.equals("1")) {
+                System.out.println("\n---- Alta de Usuario ----");
+                System.out.print("Nombre: ");
+                String nombre = scanner.nextLine();
+
+                System.out.print("Edad: ");
+                int edad = Integer.parseInt(scanner.nextLine());
+
+                System.out.print("Género: ");
+                String genero = scanner.nextLine();
+
+                System.out.print("Nombre de usuario: ");
+                String nombreUsuario = scanner.nextLine();
+
+                System.out.print("Correo electrónico: ");
+                String correo = scanner.nextLine();
+
+                Usuario usuario = new Usuario(nombre, edad, genero, nombreUsuario, correo);
+                usuarios.add(usuario);
+                System.out.println("Usuario dado de alta con éxito!");
+            } else if (opcion.equals("2")) {
+                System.out.println("\n---- Usuarios Registrados ----");
+                for (Usuario usuario : usuarios) {
+                    System.out.println("Nombre: " + usuario.getNombre());
+                    System.out.println("Edad: " + usuario.getEdad());
+                    System.out.println("Género: " + usuario.getGenero());
+                    System.out.println("Nombre de usuario: " + usuario.getNombreUsuario());
+                    System.out.println("Correo electrónico: " + usuario.getCorreo());
+                    System.out.println();
+                }
+            } else if (opcion.equals("3")) {
+                System.out.println("Saliendo del programa...");
+            } else {
+                System.out.println("Opción inválida. Por favor, selecciona una opción válida.");
+            }
+        }
+    }
+}

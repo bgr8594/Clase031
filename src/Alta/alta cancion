@@ -1,0 +1,72 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Cancion {
+    private String nombre;
+    private String artista;
+    private String genero;
+
+    public Cancion(String nombre, String artista, String genero) {
+        this.nombre = nombre;
+        this.artista = artista;
+        this.genero = genero;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getArtista() {
+        return artista;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+}
+
+public class AltaCanciones {
+    public static void main(String[] args) {
+        List<Cancion> canciones = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        String opcion = "";
+
+        while (!opcion.equals("3")) {
+            System.out.println("\n---- Menú ----");
+            System.out.println("1. Dar de alta canción");
+            System.out.println("2. Mostrar canciones");
+            System.out.println("3. Salir");
+            System.out.print("Selecciona una opción: ");
+            opcion = scanner.nextLine();
+
+            if (opcion.equals("1")) {
+                System.out.println("\n---- Alta de Canción ----");
+                System.out.print("Nombre de la canción: ");
+                String nombreCancion = scanner.nextLine();
+
+                System.out.print("Artista: ");
+                String artista = scanner.nextLine();
+
+                System.out.print("Género: ");
+                String genero = scanner.nextLine();
+
+                Cancion cancion = new Cancion(nombreCancion, artista, genero);
+                canciones.add(cancion);
+                System.out.println("Canción dada de alta con éxito!");
+            } else if (opcion.equals("2")) {
+                System.out.println("\n---- Canciones Registradas ----");
+                for (Cancion cancion : canciones) {
+                    System.out.println("Nombre de la canción: " + cancion.getNombre());
+                    System.out.println("Artista: " + cancion.getArtista());
+                    System.out.println("Género: " + cancion.getGenero());
+                    System.out.println();
+                }
+            } else if (opcion.equals("3")) {
+                System.out.println("Saliendo del programa...");
+            } else {
+                System.out.println("Opción inválida. Por favor, selecciona una opción válida.");
+            }
+        }
+    }
+}

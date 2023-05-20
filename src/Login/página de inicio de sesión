@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Inicio - Musica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #1db954;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .song-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        .song-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .song-name {
+            font-weight: bold;
+        }
+        
+        .song-artist {
+            color: #888;
+        }
+        
+        .search-form {
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            width: 300px;
+            padding: 5px;
+        }
+        
+        .search-button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Musica</h1>
+    </header>
+    <main>
+        
+        <h2>Buscar Canciones</h2>
+        <form class="search-form">
+            <input type="text" class="search-input" placeholder="Buscar por artista">
+            <input type="submit" class="search-button" value="Buscar">
+        </form>
+        <ul class="song-list search-results">
+            <li>
+                <span class="song-name">Cancion4</span>
+                <br>
+                <span class="song-artist">Artista1</span>
+            </li>
+            <li>
+                <span class="song-name">Cancion5</span>
+                <br>
+                <span class="song-artist">Artista2</span>
+            </li>
+            <li>
+                <span class="song-name">Cancion6</span>
+                <br>
+                <span class="song-artist">Artista3</span>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
