@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cerrar Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #1db954;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .logout-button {
+            background-color: #1db954;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cerrar Sesión</h1>
+    </header>
+    <main>
+        <p>¿Estás seguro(a) de que deseas cerrar sesión?</p>
+        <a href="logout.php" class="logout-button">Cerrar Sesión</a>
+    </main>
+</body>
+</html>
